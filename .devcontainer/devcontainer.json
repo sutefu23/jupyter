@@ -1,0 +1,20 @@
+{
+  "name": "bot_tutorial_notebook_1",
+  "dockerComposeFile": ["../docker-compose.yml"],
+  "service": "notebook",
+  "remoteUser": "jovyan",
+  "workspaceFolder": "/home/jovyan/work",
+  "extensions": [
+    "ms-python.python",
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "kddejong.vscode-cfn-lint"
+  ],
+  "settings": {
+    "python.linting.pylintEnabled": false,
+    "python.linting.flake8Enabled": true,
+    "editor.formatOnSave": true,
+    "python.linting.flake8Args": ["--max-line-length=150"],
+    "eslint.workingDirectories": [{ "mode": "auto" }]
+  }
+}
