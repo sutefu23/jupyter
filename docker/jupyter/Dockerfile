@@ -29,4 +29,9 @@ RUN sed -i '/font\.family/d' /opt/conda/lib/python3.9/site-packages/matplotlib/m
 RUN echo "font.family: IPAexGothic" >> /opt/conda/lib/python3.9/site-packages/matplotlib/mpl-data/matplotlibrc
 RUN rm -rf /home/jovyan/.cache
 
+RUN pip install kaggle
+ADD kaggle.json /home/jovyan/.kaggle/
+RUN chown jovyan ~/.kaggle/kaggle.json
+RUN chmod 600 ~/.kaggle/kaggle.json
+
 USER jovyan
