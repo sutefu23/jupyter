@@ -35,3 +35,4 @@ RUN chown jovyan ~/.kaggle/kaggle.json
 RUN chmod 600 ~/.kaggle/kaggle.json
 
 USER jovyan
+RUN python3 -m pip install ipykernel -U --user --force-reinstall
